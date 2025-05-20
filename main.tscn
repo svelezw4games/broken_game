@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://c567u6745vp4i"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7dm0k"]
+
+[sub_resource type="Sky" id="Sky_7dm0k"]
+
+[sub_resource type="Environment" id="Environment_7dm0k"]
+background_mode = 1
+background_color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+background_energy_multiplier = 2.82
+sky = SubResource("Sky_7dm0k")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_7dm0k")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999997, 0, -0.00237359, 0, 1, 0, 0.00237359, 0, 0.999997, -0.00909233, 0, 6.92127)
+current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.759884, 0, 0.650058, 0, 1, 0, -0.650058, 0, 0.759884, 6.63374, 0, 7.53462)
+light_color = Color(0.975169, 0.393122, 1, 1)
+light_energy = 8.162
+spot_range = 11.3273
+spot_angle = 12.3192
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(0.999994, 1.06048e-10, 0.0033685, 0.00235425, 0.715217, -0.698898, -0.00240921, 0.698902, 0.715213, 0.0821495, -7.00342, 7.78107)
+light_color = Color(0.947736, 0.73004, 3.85046e-07, 1)
+light_energy = 11.895
+spot_range = 16.6862
+spot_angle = 10.3696
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.785522, 0, -0.618833, 0, 1, 0, 0.618833, 0, 0.785522, -6.20245, 0, 7.86323)
+light_color = Color(0.310125, 0.872821, 0.999999, 1)
+light_energy = 14.561
+spot_range = 11.3273
+spot_angle = 12.3192
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7dm0k")
